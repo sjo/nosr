@@ -41,8 +41,7 @@ int match_glob(filterpattern_t *pattern, const char *line, size_t UNUSED len,
 }
 
 int match_regex(filterpattern_t *pattern, const char *line, size_t len,
-		int UNUSED flags)
-{
+		int UNUSED flags) {
 	struct pcre_data *re = &pattern->re;
 
 	if(len == (size_t)-1) {
